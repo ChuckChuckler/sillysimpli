@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactoringPracticerOMG</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">☆ Silly Simplification ☆</h1>
+    <div class="flexContainer">
+        <div class="innerDiv">
+            <h3 class="problemNo" id="problemNo">Problem </h3>
+            <hr class="break">
+            <br>
+            <h2 id="line1" class="equation"></h2>
+            <h2 id="line2" class="equation"></h2>
+            <h2 id="line3" class="equation"></h2>
+            <br>
+            <hr class="break">
+            <br>
+            <div class="answerInput">
+                <label for="answer">Your Answer:</label>
+                <input id="answer" type="text" name="answer" autocomplete="off">
+                <button onclick="checkAnswer()">Check</button>
+                <br>
+                <br>
+                <div class="exponentButtons">
+                    <button class="exponent" onclick="insert('⁰')">x⁰</button>
+                    <button class="exponent" onclick="insert('¹')">x¹</button>
+                    <button class="exponent" onclick="insert('²')">x²</button>
+                    <button class="exponent" onclick="insert('³')">x³</button>
+                    <button class="exponent" onclick="insert('⁴')">x⁴</button>
+                    <button class="exponent" onclick="insert('⁵')">x⁵</button>
+                    <button class="exponent" onclick="insert('⁶')">x⁶</button>
+                    <button class="exponent" onclick="insert('⁷')">x⁷</button>
+                    <button class="exponent" onclick="insert('⁸')">x⁸</button>
+                    <button class="exponent" onclick="insert('⁹')">x⁹</button>
+                </div>
+            </div>
+            <h4 class="correct" id="correctDisp"></h4>
+            <button id="nextbtn" style="display: none;" onclick="equationDisplay()">Next</button>
+            <div id="infoDiv">
+                <p class="info">When adding exponents, please use strictly the above buttons and not ^.</p>
+                <p class="info">Treat i as a variable, not an imaginary number.</p>
+            </div>
+        </div>
+        <div class="innerDiv">
+            <h2 class="joke" id="joke"></h2>
+            <h3 class="punchline" id="punchline"></h3>
+            <h3 class="congrats" id="congrats"></h3>
+            <button class="regen" onclick="reGen()" id="regen">Do another!</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function(){
+            let data = <%- JSON.stringify(dataPassed) %>;
+            initialSetup(data);
+        }
+    </script>
+</body>
+</html>

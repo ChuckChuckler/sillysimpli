@@ -1,0 +1,222 @@
+@keyframes divSwell {
+    from{
+        width: 90%;
+        height: 95%;
+    }
+    to{
+        width: 92%;
+        height: 97%;
+    }
+}
+
+@keyframes divShrink {
+    to{
+        width: 90%;
+        height: 95%;
+    }
+    from{
+        width: 92%;
+        height: 97%;
+    }
+}
+
+@keyframes titleSwell{
+    from{font-size: 5vw;}
+    to{font-size: 5.5vw;}
+}
+
+@keyframes titleShrink{
+    to{font-size: 5vw;}
+    from{font-size: 5.5vw;}
+}
+
+@keyframes h3Swell {
+    from{font-size: 2vw;}
+    to{font-size: 2.2vw;}
+}
+
+@keyframes h3Shrink {
+    to{font-size: 2vw;}
+    from{font-size: 2.2vw;}
+}
+
+@keyframes spanSwell{
+    from{font-size: 3vw;}
+    to{font-size: 3.3vw;}
+}
+
+@keyframes spanShrink{
+    from{font-size: 3.3vw;}
+    to{font-size: 3vw;}
+}
+
+@keyframes buttonSwell{
+    to{width: 52%;
+        height: 42px;}
+    from{width: 50%;
+        height: 40;}
+}
+
+@keyframes buttonShrink{
+    from{width: 52%;
+        height: 42px;}
+    to{width: 50%;
+        height: 40;}
+}
+
+@keyframes jokeSwell{
+    from{font-size: 3vw;}
+    to{font-size: 3.2vw;}
+}
+
+@keyframes jokeShrink{
+    to{font-size: 3vw;}
+    from{font-size: 3.2vw;}
+}
+
+body{
+    background-color: #393c4d;
+}
+
+h1{
+    text-align: center;
+    color: #F8F1C4;
+    font-family: "Pixelify Sans", serif;
+    font-size: 5vw;
+}
+
+h1:hover{
+    font-size: 5.5vw;
+    animation: titleSwell;
+    animation-duration: 0.5s;
+}
+
+h1:not(:hover){
+    font-size: 5vw;
+    animation: titleShrink;
+    animation-duration: 0.5s;
+}
+
+
+.holder{
+    background-color: #1B1817;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 90%;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.holder:hover{
+    width: 92%;
+    height: 97%;
+    animation: divSwell;
+    animation-duration: 0.5s;
+}
+
+.holder:not(:hover){
+    width: 90%;
+    height: 95%;
+    animation: divShrink;
+    animation-duration: 0.5s;
+}
+
+h3{
+    font-size: 2vw;
+    font-family: "PT Serif", serif;
+}
+
+h3:hover{
+    font-size: 2.2vw;
+    animation: h3Swell;
+    animation-duration: 0.5s;
+}
+
+h3:not(:hover){
+    font-size: 2vw;
+    animation: h3Shrink;
+    animation-duration: 0.5s;
+}
+
+.line1{
+    color: #B4F1B7;
+}
+
+.line2{
+    color: #ADD8DD;
+}
+
+span{
+    color: #E8B7FF;
+    font-size: 3vw;
+    font-family: "DM Serif Text", serif;
+}
+
+span:hover{
+    font-size: 3.3vw;
+    animation: spanSwell;
+    animation-duration: 0.5s;
+}
+
+span:not(:hover){
+    font-size: 3vw;
+    animation: spanShrink;
+    animation-duration: 0.5s;
+}
+
+p{
+    color:#F8F1C4;
+    font-family: "Courier Prime", serif;
+}
+
+button{
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    background-color: #F8F1C4;
+    color: #38372f;
+}
+
+button:hover{
+    width: 52%;
+    height: 42px;
+    color: #F8F1C4;
+    background-color: #575545;
+    animation: buttonSwell;
+    animation-duration: 0.5s;
+}
+
+button:not(:hover){
+    width: 50%;
+    height: 40px;
+    background-color: #F8F1C4;
+    color: #38372f;
+    animation: buttonShrink;
+    animation-duration: 0.5s;
+}
+
+
+h2{
+    font-size: 3vw;
+    font-family: "DM Serif Text", serif;
+    color:#F8F1C4;
+}
+
+h2:hover{
+    font-size: 3.2vw;
+    animation: jokeSwell;
+    animation-duration: 0.5s;
+}
+
+h2:not(:hover){
+    font-size: 3vw;
+    animation: jokeShrink;
+    animation-duration: 0.5s;
+}

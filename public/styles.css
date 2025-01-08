@@ -1,0 +1,238 @@
+@keyframes titleSwell{
+    from{font-size: 2.5vw;}
+    to{font-size: 2.65vw;}
+}
+
+@keyframes titleShrink{
+    from{font-size: 2.65vw;}
+    to{font-size: 2.5vw;}
+}
+
+@keyframes divSwell {
+    from{ width: 48%;}
+    to{width: 50%}
+}
+
+@keyframes divShrink {
+    from{ width: 50%;}
+    to{width: 48%}
+}
+
+@keyframes exponentSwell{
+    from{width: 3vw;}
+    to{width: 3.2vw;}
+}
+
+@keyframes exponentShrink{
+    from{width: 3.2vw;}
+    to{width: 3vw;}
+}
+
+@keyframes regenSwell{
+    from{width: 80%;
+        height: 50px;}
+    to{width: 82%;
+        height: 54px;}
+}
+
+@keyframes regenShrink{
+    from{width: 82%;
+        height: 54px;}
+    to{width: 80%;
+        height: 50px;}
+}
+
+@keyframes equationSwell{
+    from{font-size: 2.7vw;}
+    to{font-size: 2.9vw;}
+}
+
+@keyframes equationShrink{
+    from{font-size: 2.9vw;}
+    to{font-size: 2.7vw;}
+}
+
+body{
+    background-color: #393c4d;
+}
+
+.equation{
+    line-height: 0.5px;
+    font-size: 2.7vw;
+    color: #E8B7FF;
+    text-align: center;
+}
+
+.equation:hover{
+    font-size: 2.9vw;
+    animation: equationSwell;
+    animation-duration: 0.5s;
+}
+
+.equation:not(:hover){
+    font-size: 2.7vw;
+    animation: equationShrink;
+    animation-duration: 0.5s;
+}
+
+label{
+    color: #B4F1B7;
+    font-size: 2vw;
+}
+
+.info{
+    color: #ADD8DD;
+    font-family: "Courier Prime", serif;
+}
+
+.problemNo{
+    color: #ADD8DD;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 30px;
+    font-family: "DM Serif Text", serif;
+}
+
+.correct{
+    font-family: "Courier Prime", serif;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    height: 105%;
+}
+
+.title{
+    font-size: 2.5vw;
+    text-align: center;
+    color: #F8F1C4;
+    font-family: "Pixelify Sans", serif;
+}
+
+.title:hover{
+    font-size: 2.65vw;
+    animation: titleSwell;
+    animation-duration: 0.5s;
+}
+
+.title:not(:hover){
+    font-size: 2.5vw;
+    animation: titleShrink;
+    animation-duration: 0.5s;
+}
+
+.joke{
+    color: #B4F1B7;
+    text-align: center;
+    font-size: 200%;
+    font-family: "DM Serif Text", serif;
+}
+
+.punchline{
+    color: #ADD8DD;
+    text-align: center;
+    font-size: 250%;
+    font-family: "PT Serif", serif;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal;
+}
+
+.congrats{
+    color:#E8B7FF;
+    font-size: 175%;
+    text-align: center;
+    font-family: "DM Serif Text", serif;
+}
+
+.break{
+    border-style: dashed;
+    border-width: 1px;
+    border-color:#ADD8DD;
+}
+
+.regen{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 50px;
+    font-size: 2.5vw;
+}
+
+.regen:not(:hover){
+    width: 80%;
+    height: 50px;
+    animation: regenShrink;
+    animation-duration: 0.5s;
+}
+
+.regen:hover{
+    width: 82%;
+    height: 54px;
+    animation: regenSwell;
+    animation-duration: 0.5s;
+}
+
+button{
+    background-color: #F8F1C4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fffefa;
+    color: #38372f;
+}
+
+button:hover{
+    color: #F8F1C4;
+    background-color: #575545;
+}
+
+.innerDiv{
+    width: 48%;
+    background-color: #1B1817;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.innerDiv:hover{
+    width: 50%;
+    animation: divSwell;
+    animation-duration: 0.5s;
+}
+
+.innerDiv:not(:hover){
+    width: 48%;
+    animation: divShrink;
+    animation-duration: 0.5s;
+}
+
+h1{
+    width: 100%;
+}
+
+.exponent:not(:hover){
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.7vw;
+    animation: exponentShrink;
+    animation-duration: 0.5s;
+}
+
+.exponent:hover{
+    height: 3.2vw;
+    width: 3.2vw;
+    animation: exponentSwell;
+    animation-duration: 0.5s;
+}
+
+.answerInput{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
